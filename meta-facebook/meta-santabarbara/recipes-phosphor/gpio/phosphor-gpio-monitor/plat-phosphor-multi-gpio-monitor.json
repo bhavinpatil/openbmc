@@ -1,0 +1,72 @@
+[
+    {
+        "Name": "FM_PWRGD_CPU0_PWROK",
+        "LineName": "FM_PWRGD_CPU0_PWROK",
+        "EventMon": "BOTH",
+        "Targets": {
+            "RISING": [
+                "deassert-power-good-drop.service"
+            ],
+            "FALLING": [
+                "assert-power-good-drop.service"
+            ]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "FM_PVDDCR_CPU0_P0_OCP_N",
+        "LineName": "FM_PVDDCR_CPU0_P0_OCP_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "RISING": [
+                "vr-fault-deassert-log@FM_PVDDCR_CPU0_P0_OCP_N.service"
+            ],
+            "FALLING": [
+                "vr-fault-assert-log@FM_PVDDCR_CPU0_P0_OCP_N.service"
+            ]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "FM_PVDDCR_CPU1_P0_OCP_N",
+        "LineName": "FM_PVDDCR_CPU1_P0_OCP_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "RISING": [
+                "vr-fault-deassert-log@FM_PVDDCR_CPU1_P0_OCP_N.service"
+            ],
+            "FALLING": [
+                "vr-fault-assert-log@FM_PVDDCR_CPU1_P0_OCP_N.service"
+            ]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "FM_PVDDCR_SOC_P0_OCP_N",
+        "LineName": "FM_PVDDCR_SOC_P0_OCP_N",
+        "EventMon": "BOTH",
+        "Targets": {
+            "RISING": [
+                "vr-fault-deassert-log@FM_PVDDCR_SOC_P0_OCP_N.service"
+            ],
+            "FALLING": [
+                "vr-fault-assert-log@FM_PVDDCR_SOC_P0_OCP_N.service"
+            ]
+        },
+        "Continue": true
+    },
+    {
+        "Name": "reset-button",
+        "LineName": "reset-button",
+        "EventMon": "BOTH",
+        "Targets": {
+            "RISING": [
+                "deassert-reset-button.service"
+            ],
+            "FALLING": [
+                "assert-reset-button.service"
+            ]
+        },
+        "Continue": true
+    }
+]

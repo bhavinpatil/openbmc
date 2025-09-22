@@ -18,26 +18,11 @@ EXTRA_OEMESON:append:p10bmc = " \
     -Dhypervisor-computer-system=enabled \
 "
 
-PACKAGECONFIG:remove:system1 = " \
-    redfish-allow-deprecated-power-thermal \
-"
-
 EXTRA_OEMESON:append:sbp1 = " \
     -Dredfish-updateservice-use-dbus=disabled \
 "
 
-EXTRA_OEMESON:append:witherspoon-tacoma = " \
-    -Dvm-websocket=disabled \
-    -Dhypervisor-computer-system=enabled \
-"
-
 PACKAGECONFIG:remove:p10bmc = " \
-    kvm \
-    redfish-allow-deprecated-power-thermal \
-    mutual-tls-auth \
-"
-
-PACKAGECONFIG:remove:witherspoon-tacoma = " \
     kvm \
     mutual-tls-auth \
 "
