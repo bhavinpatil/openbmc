@@ -1,0 +1,8 @@
+[Unit]
+Description=Continuous Hello Word Service
+
+[Service]
+ExecStart=/bin/bash /usr/bin/sysd.sh
+
+[Install]
+WantedBy=multi-user.target
